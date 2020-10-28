@@ -4,10 +4,12 @@ public class Account extends AbstractBankAccount {
   String meme = InterfaceBankAccount.BANK;
 
   private int bonusValue;
+  AccountType type;
 
   //overloaded constructor for Account
-  Account(String name, int num, int amt) {
+  Account(String name, int num, int amt, AccountType type) {
     super(name, num, (amt + calculateInitialBonusValue(amt)));
+    this.type = type;
   }
 
   private static int calculateInitialBonusValue(int amt) {
@@ -31,5 +33,9 @@ public class Account extends AbstractBankAccount {
 //endif
   }//end method deposit
 
+  public String toString() {
+    return "\nAccount Type : " + this.type + "\n" +
+        super.toString();
+  }//end method toString
 
 }

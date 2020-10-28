@@ -16,6 +16,7 @@ public class JavaBankArrayListDelete extends JFrame {
     public String Name;
     public int Accountnum;
     public int Balance;
+    public AccountType type;
 
     
     // JPanel for user inputs
@@ -284,7 +285,7 @@ public class JavaBankArrayListDelete extends JFrame {
             
     	if ((Name != "") & (Accountnum != 0))  {
         	    //add a new account to the list using the Account constructor
-        		Accounts.add(new Account(Name,Accountnum,Balance));
+        		Accounts.add(new Account(Name,Accountnum,Balance, type));
         		//Set a temp Account for display purposes
         		Account tempAccount = (Account)Accounts.get(Accounts.size()-1);
         		//Display tempAccount

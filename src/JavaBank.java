@@ -17,6 +17,7 @@ public class JavaBank extends JFrame {
   public String Name;
   public int Accountnum;
   public int Balance;
+  public AccountType type;
   CompanyColor companyColor = new CompanyColor();
   private Color myColor = new Color(companyColor.getR(), companyColor.getG(),
       companyColor.getB()); // creates a color object using Company color class
@@ -309,7 +310,7 @@ public class JavaBank extends JFrame {
     //int emptyAccount = 11;
 
     if ((noAccounts <= 9) & (Name != "") & (Accountnum != 0)) {
-      myAccounts[noAccounts] = new Account(Name, Accountnum, Balance);
+      myAccounts[noAccounts] = new Account(Name, Accountnum, Balance, type);
       AccountNames[noAccounts] = "USED";
       //System.out.println(myAccounts[noAccounts].getaccountname());
       //emptyAccount = i;

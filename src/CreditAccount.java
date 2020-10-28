@@ -45,9 +45,9 @@ public class CreditAccount extends AbstractBankAccount {
 
   //print method
   public void print() {
-    super.print();
-    System.out.println(
 
+    System.out.println(
+        super.toString() +
         "\nCredit Limit : " + creditLimit);
   }//end method print
 }

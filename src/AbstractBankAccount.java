@@ -62,8 +62,8 @@ public abstract class AbstractBankAccount {
   }
 
   //print method
-  public void print() {
-    System.out.println("Bank Name: " + getBankName() + "\n" +
+  public String toString() {
+    return("Bank Name: " + getBankName() + "\n" +
         "Account Holder: " + accountname + "\n" +
         "Account Number: " + accountnum + "\n" +
         "Account Balance: " + balance + "\n");
